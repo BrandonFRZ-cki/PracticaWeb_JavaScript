@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Compra</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="calculadora.js" defer></script>
+</head>
+<body>
+    <nav class="menu">
+        <a href="../ejercicio1_Calculadora/calculadora.html" aria-current="page">Ej. 1 Calculadora</a>
+        <a href="../ejercicio2_VerificadorContrasena/verificador.html">Ej. 2 Contraseña</a>
+        <a href="../ejercicio3_AnalizadorCalificaciones/analizador.html">Ej. 3 Calificaciones</a>
+        <a href="../ejercicio4_ListaTareas/tareas.html">Ej. 4 Tareas</a>
+    </nav>
+    <h1>Calculadora de Compra</h1>
+    <form name="formCalculadora" onsubmit="calcular(event)" novalidate>
+        <label for="precio">Precio unitario ($)</label>
+        <input type="text" id="precio" inputmode="decimal" placeholder="Ej: 12,50">
+
+        <label for="cant">Cantidad (unidades)</label>
+        <input type="text" id="cant" inputmode="numeric" placeholder="Ej: 3">
+
+        <button type="submit">Calcular total</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <section id="resultado" hidden>
+        <p><span>Subtotal:</span> <span id="subtotal">$0.00</span></p>
+        <p><span>Descuento (10 %, compras de $100 o más):</span> <span id="descuento">$0.00</span></p>
+        <p class="total"><span>Total:</span> <span id="total">$0.00</span></p>
+    </section>
+</body>
+</html>

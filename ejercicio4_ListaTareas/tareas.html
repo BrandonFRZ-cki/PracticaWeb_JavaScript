@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="tareas.js" defer></script>
+</head>
+<body>
+    <nav class="menu">
+        <a href="../ejercicio1_Calculadora/calculadora.html">Ej. 1 Calculadora</a>
+        <a href="../ejercicio2_VerificadorContrasena/verificador.html">Ej. 2 Contraseña</a>
+        <a href="../ejercicio3_AnalizadorCalificaciones/analizador.html">Ej. 3 Calificaciones</a>
+        <a href="../ejercicio4_ListaTareas/tareas.html" aria-current="page">Ej. 4 Tareas</a>
+    </nav>
+    <h1>Lista de tareas</h1>
+
+    <form id="formTarea" novalidate>
+        <label for="nuevaTarea">Nueva tarea</label>
+        <input type="text" id="nuevaTarea" autocomplete="off">
+        <button type="submit">Agregar tarea</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <ul id="listaTareas" class="lista-tareas"></ul>
+</body>
+</html>

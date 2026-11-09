@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de calificaciones</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="analizador.js" defer></script>
+</head>
+<body>
+    <nav class="menu">
+        <a href="../ejercicio1_Calculadora/calculadora.html">Ej. 1 Calculadora</a>
+        <a href="../ejercicio2_VerificadorContrasena/verificador.html">Ej. 2 Contraseña</a>
+        <a href="../ejercicio3_AnalizadorCalificaciones/analizador.html" aria-current="page">Ej. 3 Calificaciones</a>
+        <a href="../ejercicio4_ListaTareas/tareas.html">Ej. 4 Tareas</a>
+    </nav>
+    <h1>Analizador de calificaciones</h1>
+    <p>Calificaciones sobre 10. Se considera aprobada una nota igual o superior a 7.</p>
+
+    <button id="analizar" type="button">Analizar</button>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <section id="resultados" hidden>
+        <p><strong>Calificaciones:</strong> <span id="listaNotas"></span></p>
+        <p><strong>Promedio:</strong> <span id="promedio"></span></p>
+        <p><strong>Nota más alta:</strong> <span id="maxima"></span></p>
+        <p><strong>Nota más baja:</strong> <span id="minima"></span></p>
+        <p><strong>Aprobadas:</strong> <span id="aprobadas"></span></p>
+        <p><strong>No aprobadas:</strong> <span id="noAprobadas"></span></p>
+    </section>
+</body>
+</html>

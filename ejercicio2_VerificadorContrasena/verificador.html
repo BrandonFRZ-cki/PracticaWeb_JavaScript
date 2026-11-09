@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de contraseña</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="verificador.js" defer></script>
+</head>
+<body>
+    <nav class="menu">
+        <a href="../ejercicio1_Calculadora/calculadora.html">Ej. 1 Calculadora</a>
+        <a href="../ejercicio2_VerificadorContrasena/verificador.html" aria-current="page">Ej. 2 Contraseña</a>
+        <a href="../ejercicio3_AnalizadorCalificaciones/analizador.html">Ej. 3 Calificaciones</a>
+        <a href="../ejercicio4_ListaTareas/tareas.html">Ej. 4 Tareas</a>
+    </nav>
+    <h1>Verificador de reglas de contraseña</h1>
+    <p>Usa solo contraseñas de ejemplo, nunca tus contraseñas personales.</p>
+
+    <form id="formulario" novalidate>
+        <label for="clave">Contraseña de ejemplo</label>
+        <input type="password" id="clave" autocomplete="off">
+        <button type="submit">Verificar</button>
+    </form>
+
+    <ul class="lista-reglas">
+        <li id="regla-longitud"><span class="icono"></span><span class="texto">Tiene al menos 8 caracteres</span></li>
+        <li id="regla-digito"><span class="icono"></span><span class="texto">Contiene al menos un dígito (0 al 9)</span></li>
+        <li id="regla-espacios"><span class="icono"></span><span class="texto">Está libre de espacios</span></li>
+    </ul>
+
+    <p id="mensaje" class="mensaje-exito" hidden>Cumple todas las reglas</p>
+</body>
+</html>
