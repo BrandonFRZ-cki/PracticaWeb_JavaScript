@@ -1,6 +1,5 @@
 const LONGITUD_MINIMA = 8;
 
-// Devuelve true si algún carácter de la cadena es un dígito del 0 al 9.
 function tieneDigito(clave) {
     for (let i = 0; i < clave.length; i++) {
         const caracter = clave[i];
@@ -11,28 +10,22 @@ function tieneDigito(clave) {
     return false;
 }
 
-// Devuelve true si la cadena contiene algún espacio (o carácter de espacio en blanco).
 function tieneEspacios(clave) {
     for (let i = 0; i < clave.length; i++) {
-        if (clave[i].trim() === "") {
+        if (clave[i] === " ") {
             return true;
         }
     }
     return false;
 }
 
-// Devuelve un arreglo de tres booleanos: [longitud, dígito, sin espacios].
-function evaluarClave(clave) {
-    return [
+function mostrarResultados() {
+    const clave = document.getElementById("clave").value;
+    const resultados = [
         clave.length >= LONGITUD_MINIMA,
         tieneDigito(clave),
         !tieneEspacios(clave)
     ];
-}
-
-function mostrarResultados() {
-    const clave = document.getElementById("clave").value;
-    const resultados = evaluarClave(clave);
     const ids = ["regla-longitud", "regla-digito", "regla-espacios"];
 
     let todasCumplen = true;
@@ -47,7 +40,6 @@ function mostrarResultados() {
         }
     }
 
-    // El mensaje solo aparece cuando se cumplen las tres condiciones.
     document.getElementById("mensaje").hidden = !todasCumplen;
 }
 
@@ -55,6 +47,3 @@ document.getElementById("formulario").addEventListener("submit", function (event
     evento.preventDefault();
     mostrarResultados();
 });
-
-// Reto: actualizar mientras se escribe, sin usar el botón.
-document.getElementById("clave").addEventListener("input", mostrarResultados);
